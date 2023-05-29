@@ -16,13 +16,14 @@ export default function Login() {
   // const isLoggedIn = useSelector((state) => state.isLoggedIn)
   // const dispatch = useDispatch()
 
-  //check if user is logged-in
+ //check if user is logged-in
     useEffect(()=>{
-      const isLogin = localStorage.getItem("isLoggedIn")
+     const isLogin = localStorage.getItem("isLoggedIn")
       if(isLogin){
-        navigate("/Fitrack/home")
+        // dispatch(setIsLoggedIn());
+        navigate("/home")
       }
-    },[])
+     },[])
  
 
   //User Login Function
@@ -35,9 +36,9 @@ export default function Login() {
         toast.error(data.error);
       } else {
         localStorage.setItem('token',data.token)
-        localStorage.setItem('isLoggedIn',true)
+       localStorage.setItem('isLoggedIn',true)
         localStorage.setItem('userName',data.user.name)
-        // dispatch(setIsLoggedIn());
+        //  dispatch(setIsLoggedIn());
         navigate('/home');
         toast.success("User Logged-in Successfully!")      
       }

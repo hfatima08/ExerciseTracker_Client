@@ -4,8 +4,8 @@ export const loginSlice = createSlice({
     initialState:false,
     name: "isLoggedin",
     reducers:{
-        "setIsLoggedIn" :(state)=>{
-              return  state=true
+        setIsLoggedIn :(state)=>{
+              return  !state
         }
     }
 })

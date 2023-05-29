@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import axios from '../axios/api'
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -9,16 +9,14 @@ import {userSchema} from "../schema/userSchema"
 export default function Register() {
 
 const navigate = useNavigate();
-// const [data,setData] = useState({
-//   name: '',
-//   email:'',
-//   password:''
-// })
 
-// const handleChange = ({ currentTarget: input}) => {
-//   setData({...data,[input.name]:input.value});
-// }
-
+//check if user is logged-in
+useEffect(()=>{
+  const isLogin = localStorage.getItem("isLoggedIn")
+  if(isLogin){
+    navigate("/home")
+  }
+},[])
 
   const registerUser = async (data) => {
     //  e.target.preventDefault();

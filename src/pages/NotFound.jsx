@@ -10,17 +10,10 @@ export default function NotFound() {
 		Page Not Found
 	</div>
 	<button class="mt-5">
-      <div
-        class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
-      >
-        <span
-          class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-white group-hover:translate-y-0 group-hover:translate-x-0"
-        ></span>
-
-        <span class="relative block px-8 py-3 text-black border border-current">
+    
+        <span class="relative block px-8 py-3 text-black border border-current bg-white">
           <Link to="/home">Go Home</Link>
         </span>
-      </div>
     </button>
 </main> 
     </>

@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
         }    else if(error.response.status === 401){
             navigate('/')
             toast.error("You may login first!")
+            localStorage.clear()
         }
     })
 

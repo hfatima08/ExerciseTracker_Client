@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 
 export default function ProtectedRoute() {
-  const isLogin = localStorage.getItem("isLoggedIn")
+ // const isLoggedIn = useSelector((state) => state.isLoggedIn)
+   const isLogin = localStorage.getItem("isLoggedIn")
     if (!isLogin) {
       toast.error("You may login first!")
       return <Navigate to='/' />

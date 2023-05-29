@@ -17,6 +17,9 @@ export default function Home() {
   const navigate = useNavigate();
   const [ran,setRan] = useState(false);
   
+  
+
+
 
   {/* only run setup once */}
   if(!ran){
@@ -24,22 +27,14 @@ export default function Home() {
      setRan(true);
   }
 
-  useEffect(()=>{
-    (async function() {
-     await axios.get("/protected")
-    })()
-  },[])
-
-  // const {user} = useContext(userContext)
   return (
     <>
     <Navbar/>
-    <Hero/>
+    <Hero mainHeading="Maintain Your Fitness With Daily Activities" subHeading="devise time for your body & mind!" button="Let's Start" bannerImg="/assets/images/home.png" style="h-auto md:h-auto lg:h-[620px] bg-[#F6DDFF61] lg:px-10 lg:pt-10 md:mt-[50px] md:px-[90px] px-4 pt-20 items-center flex justify-center flex-col-reverse lg:flex-row md:flex-row md:gap-28 gap-10`"/>
     <HowItWorks/>
     <ActivityTypes/>
     <UserActivities/>
     <Footer/>
-    {/* {user? (<h2>Hi, {user.name}!</h2>) : <p>no user</p>} */}
     </>
   )
 }
