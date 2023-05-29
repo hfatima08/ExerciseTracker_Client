@@ -30,7 +30,7 @@ https://github.com/hfatima08/ExerciseTracker_Server.git
 Clone the project
 
 ```bash
-  git clone https://github.com/hfatima08/ExerciseTracker_Frontend.git
+  git clone https://github.com/hfatima08/ExerciseTracker_Client.git
 
 ```
 
